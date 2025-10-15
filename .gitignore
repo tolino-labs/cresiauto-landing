@@ -1,0 +1,89 @@
+# Archivos del sistema operativo
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Archivos temporales
+*.tmp
+*.temp
+*~
+*.swp
+*.swo
+*#
+
+# Archivos de respaldo
+*.bak
+*.backup
+*.old
+
+# Archivos de log
+*.log
+logs/
+
+# Archivos de configuración local
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Archivos de IDE/Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de Node.js (si se añaden dependencias en el futuro)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Archivos de build/dist (si se añade un proceso de build)
+dist/
+build/
+out/
+
+# Archivos de cache
+.cache/
+.parcel-cache/
+
+# Archivos de testing
+coverage/
+.nyc_output/
+
+# Archivos de documentación generada
+docs/build/
+
+# Archivos de configuración específicos del servidor
+.htaccess
+web.config
+
+# Archivos de analytics y tracking (si se añaden)
+google-analytics.js
+gtag.js
+
+# Archivos de certificados SSL
+*.pem
+*.key
+*.crt
+
+# Archivos de base de datos local (si se añade)
+*.db
+*.sqlite
+*.sqlite3
+
+# Archivos de configuración de servidor web
+nginx.conf
+apache.conf
+
+# Archivos de deployment
+deploy.sh
+deploy.yml
+.github/workflows/
