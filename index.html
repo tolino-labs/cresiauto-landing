@@ -13,8 +13,8 @@
     <meta property="og:url" content="https://www.cresiauto.com/" />
     <meta property="og:image" content="/og-cresiauto.jpg" />
     <!-- Favicon -->
-    <link rel="icon" href="/images/logo.png" />
-    <link rel="apple-touch-icon" href="/images/logo.png" />
+    <link rel="icon" href="/images/logo.svg" />
+    <link rel="apple-touch-icon" href="/images/logo.svg" />
     <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Material Icons -->
@@ -115,8 +115,8 @@
                     </a>
                 </div>
                 <div class="flex items-center gap-4">
-                    <div class="hidden sm:flex items-center gap-3 text-sm bg-brand-600/20 px-3 py-1 rounded-md">
-                        <span class="material-icons text-sm text-brand-300">schedule</span>
+                    <div id="schedule-container" class="hidden sm:flex items-center gap-3 text-sm px-3 py-1 rounded-md transition-colors duration-300">
+                        <span class="material-icons text-sm" id="schedule-icon">schedule</span>
                         <div class="flex items-center gap-2">
                             <span class="text-brand-200">Lun-Jue:</span>
                             <span class="text-white font-medium" id="weekday-morning">8:00-13:00</span>
@@ -125,6 +125,8 @@
                             <span class="text-gray-400 mx-1">|</span>
                             <span class="text-brand-200">Vie:</span>
                             <span class="text-white font-medium" id="friday-hours">8:00-15:00</span>
+                            <span class="text-gray-400 mx-1">|</span>
+                            <span class="font-semibold" id="status-text">ABIERTO</span>
                         </div>
                     </div>
                 </div>
@@ -136,7 +138,7 @@
     <header class="bg-white/90 backdrop-blur sticky top-0 z-40 border-b border-gray-200">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="#" class="flex items-center gap-3">
-                <img src="/images/logo.png" alt="Cresiauto - Smart Mobility Solutions" class="h-20 w-auto" id="logo-img" />
+                <img src="/images/logo-nobg.png" alt="Cresiauto - Smart Mobility Solutions" class="h-20 w-auto" id="logo-img" />
                 <span class="sr-only" id="company-name">Cresiauto</span>
             </a>
             <nav class="hidden md:flex items-center gap-8">
@@ -326,14 +328,22 @@
                 <h3 class="text-2xl font-semibold text-gray-900">Trabajamos con</h3>
                 <p class="mt-3 text-gray-600">Aseguradoras y marcas líderes en recambio y neumáticos.</p>
                 <div class="mt-6 grid grid-cols-3 sm:grid-cols-4 gap-6">
-                    <div class="h-12 bg-gray-100 rounded-md grid place-items-center text-gray-500">MAPFRE</div>
-                    <div class="h-12 bg-gray-100 rounded-md grid place-items-center text-gray-500">ALLIANZ</div>
-                    <div class="h-12 bg-gray-100 rounded-md grid place-items-center text-gray-500">AXA</div>
-                    <div class="h-12 bg-gray-100 rounded-md grid place-items-center text-gray-500">GENERALI</div>
-                    <div class="h-12 bg-gray-100 rounded-md grid place-items-center text-gray-500">PIRELLI</div>
-                    <div class="h-12 bg-gray-100 rounded-md grid place-items-center text-gray-500">MICHELIN</div>
-                    <div class="h-12 bg-gray-100 rounded-md grid place-items-center text-gray-500">BOSCH</div>
-                    <div class="h-12 bg-gray-100 rounded-md grid place-items-center text-gray-500">ZF</div>
+                    <div class="h-16 bg-white rounded-md grid place-items-center p-2 shadow-sm border">
+                        <img src="images/Mapfre_logo.svg.png" alt="MAPFRE" class="h-12 w-auto object-contain">
+                    </div>
+                    <div class="h-16 bg-white rounded-md grid place-items-center p-2 shadow-sm border">
+                        <img src="images/logo-allianz.webp" alt="ALLIANZ" class="h-12 w-auto object-contain">
+                    </div>
+                    <div class="h-16 bg-white rounded-md grid place-items-center p-2 shadow-sm border">
+                        <img src="images/AXA_Logo.svg.png" alt="AXA" class="h-12 w-auto object-contain">
+                    </div>
+                    <div class="h-16 bg-white rounded-md grid place-items-center p-2 shadow-sm border">
+                        <img src="images/generali-logo.svg" alt="GENERALI" class="h-12 w-auto object-contain">
+                    </div>
+                    <div class="h-16 bg-gray-100 rounded-md grid place-items-center text-gray-500 text-sm">PIRELLI</div>
+                    <div class="h-16 bg-gray-100 rounded-md grid place-items-center text-gray-500 text-sm">MICHELIN</div>
+                    <div class="h-16 bg-gray-100 rounded-md grid place-items-center text-gray-500 text-sm">BOSCH</div>
+                    <div class="h-16 bg-gray-100 rounded-md grid place-items-center text-gray-500 text-sm">ZF</div>
                 </div>
             </div>
         </div>
@@ -361,11 +371,6 @@
                     <div class="absolute -top-3 left-6">
                         <div class="w-12 h-12 bg-gradient-to-br from-brand-500 to-brand-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
                             JS
-                        </div>
-                    </div>
-                    <div class="absolute -top-3 right-6">
-                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg border-2 border-gray-100">
-                            <img src="https://logos-world.net/wp-content/uploads/2020/05/BMW-Logo.png" alt="BMW" class="w-8 h-8 object-contain">
                         </div>
                     </div>
                     <div class="mt-4 flex items-center mb-3">
@@ -558,7 +563,7 @@
                     <div>
                         <div class="flex items-center gap-3 mb-6">
                             <div class="bg-white/10 rounded-lg p-3">
-                                <img src="/images/logo.png" alt="Cresiauto - Smart Mobility Solutions" class="h-16 w-auto" />
+                                <img src="/images/logo.svg" alt="Cresiauto - Smart Mobility Solutions" class="h-16 w-auto" />
                             </div>
                             <div>
                                 <h3 class="text-lg font-bold text-white">Cresiauto</h3>
@@ -666,9 +671,9 @@
                     <div class="flex flex-col items-center gap-4 text-sm text-gray-400">
                         <p>© <span id="year"></span> Cresiauto. Todos los derechos reservados.</p>
                         <div class="flex items-center gap-4">
-                            <a href="#" class="hover:text-white transition">Política de privacidad</a>
-                            <a href="#" class="hover:text-white transition">Aviso legal</a>
-                            <a href="#" class="hover:text-white transition">Términos de servicio</a>
+                            <a href="privacidad.html" class="hover:text-white transition">Política de privacidad</a>
+                            <a href="aviso-legal.html" class="hover:text-white transition">Aviso legal</a>
+                            <a href="terminos-servicio.html" class="hover:text-white transition">Términos de servicio</a>
                         </div>
                     </div>
                 </div>
@@ -676,7 +681,74 @@
         </div>
     </footer>
 
-    
+    <!-- Banner de aceptación de políticas -->
+    <div id="policy-banner" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 shadow-lg z-50 transform translate-y-full transition-transform duration-300">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col gap-4">
+                <div class="flex-1">
+                    <p class="text-sm leading-relaxed">
+                        Utilizamos cookies y tecnologías similares para mejorar tu experiencia. Al continuar navegando, aceptas nuestra 
+                        <button onclick="openPolicyModal()" class="text-brand-300 hover:text-brand-200 underline">Política de Privacidad</button>, 
+                        <button onclick="openLegalModal()" class="text-brand-300 hover:text-brand-200 underline">Aviso Legal</button> y 
+                        <button onclick="openTermsModal()" class="text-brand-300 hover:text-brand-200 underline">Términos de Servicio</button>.
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <button onclick="openPolicyModal()" class="flex-1 sm:flex-none text-sm text-gray-300 hover:text-white transition px-4 py-2 border border-gray-600 rounded-md hover:border-gray-400">
+                        Configurar
+                    </button>
+                    <button onclick="acceptAllPolicies()" class="flex-1 sm:flex-none bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 rounded-md text-sm transition">
+                        Aceptar todo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de políticas -->
+    <div id="policy-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-2 sm:p-4">
+            <div class="bg-white rounded-lg max-w-4xl w-full max-h-[95vh] sm:max-h-[90vh] overflow-hidden">
+                <div class="flex items-center justify-between p-4 sm:p-6 border-b border-gray-200">
+                    <h2 id="modal-title" class="text-lg sm:text-xl font-semibold text-gray-900">Política de Privacidad</h2>
+                    <button onclick="closePolicyModal()" class="text-gray-400 hover:text-gray-600 p-1">
+                        <span class="material-icons">close</span>
+                    </button>
+                </div>
+                <div class="p-4 sm:p-6 overflow-y-auto max-h-[calc(95vh-200px)] sm:max-h-[calc(90vh-120px)]">
+                    <div id="modal-content" class="prose prose-sm max-w-none">
+                        <!-- El contenido se cargará dinámicamente -->
+                    </div>
+                </div>
+                <div class="p-4 sm:p-6 border-t border-gray-200 bg-gray-50">
+                    <div class="space-y-4">
+                        <div class="space-y-3">
+                            <label class="flex items-start gap-2 text-sm text-gray-700">
+                                <input type="checkbox" id="accept-privacy" class="rounded border-gray-300 text-brand-600 focus:ring-brand-500 mt-0.5">
+                                <span>Acepto la Política de Privacidad</span>
+                            </label>
+                            <label class="flex items-start gap-2 text-sm text-gray-700">
+                                <input type="checkbox" id="accept-legal" class="rounded border-gray-300 text-brand-600 focus:ring-brand-500 mt-0.5">
+                                <span>Acepto el Aviso Legal</span>
+                            </label>
+                            <label class="flex items-start gap-2 text-sm text-gray-700">
+                                <input type="checkbox" id="accept-terms" class="rounded border-gray-300 text-brand-600 focus:ring-brand-500 mt-0.5">
+                                <span>Acepto los Términos de Servicio</span>
+                            </label>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-3 pt-4 border-t border-gray-200">
+                            <button onclick="closePolicyModal()" class="flex-1 px-4 py-2 text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50 transition">
+                                Cancelar
+                            </button>
+                            <button onclick="savePolicyPreferences()" class="flex-1 px-4 py-2 bg-brand-600 text-white rounded-md hover:bg-brand-700 transition">
+                                Guardar preferencias
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
       // Actualizar año
@@ -752,6 +824,214 @@
         document.addEventListener('DOMContentLoaded', updateContent);
       } else {
         updateContent();
+      }
+
+      // Gestión de políticas y cookies
+      const POLICY_STORAGE_KEY = 'cresiauto_policies_accepted';
+      const COOKIE_STORAGE_KEY = 'cresiauto_cookies_accepted';
+      
+      // Verificar si las políticas ya fueron aceptadas
+      function checkPolicyAcceptance() {
+        const accepted = localStorage.getItem(POLICY_STORAGE_KEY);
+        if (!accepted) {
+          showPolicyBanner();
+        }
+      }
+      
+      // Mostrar banner de políticas
+      function showPolicyBanner() {
+        const banner = document.getElementById('policy-banner');
+        banner.classList.remove('translate-y-full');
+        banner.classList.add('translate-y-0');
+      }
+      
+      // Ocultar banner de políticas
+      function hidePolicyBanner() {
+        const banner = document.getElementById('policy-banner');
+        banner.classList.add('translate-y-full');
+        banner.classList.remove('translate-y-0');
+      }
+      
+      // Aceptar todas las políticas
+      function acceptAllPolicies() {
+        const policies = {
+          privacy: true,
+          legal: true,
+          terms: true,
+          cookies: true,
+          timestamp: new Date().toISOString()
+        };
+        
+        localStorage.setItem(POLICY_STORAGE_KEY, JSON.stringify(policies));
+        localStorage.setItem(COOKIE_STORAGE_KEY, 'true');
+        
+        hidePolicyBanner();
+        
+        // Activar Google Analytics si está disponible
+        if (typeof gtag !== 'undefined') {
+          gtag('consent', 'update', {
+            'analytics_storage': 'granted'
+          });
+        }
+      }
+      
+      // Abrir modal de políticas
+      function openPolicyModal() {
+        loadPolicyContent('privacidad.html', 'Política de Privacidad');
+        document.getElementById('policy-modal').classList.remove('hidden');
+      }
+      
+      // Abrir modal de aviso legal
+      function openLegalModal() {
+        loadPolicyContent('aviso-legal.html', 'Aviso Legal');
+        document.getElementById('policy-modal').classList.remove('hidden');
+      }
+      
+      // Abrir modal de términos de servicio
+      function openTermsModal() {
+        loadPolicyContent('terminos-servicio.html', 'Términos de Servicio');
+        document.getElementById('policy-modal').classList.remove('hidden');
+      }
+      
+      // Cargar contenido de políticas
+      async function loadPolicyContent(file, title) {
+        document.getElementById('modal-title').textContent = title;
+        document.getElementById('modal-content').innerHTML = '<div class="flex items-center justify-center p-8"><div class="animate-spin rounded-full h-8 w-8 border-b-2 border-brand-600"></div></div>';
+        
+        try {
+          const response = await fetch(file);
+          const html = await response.text();
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+          const mainContent = doc.querySelector('main');
+          
+          if (mainContent) {
+            // Extraer solo el contenido principal, excluyendo el header
+            const content = mainContent.innerHTML;
+            document.getElementById('modal-content').innerHTML = content;
+          } else {
+            document.getElementById('modal-content').innerHTML = '<p class="text-gray-600">Error al cargar el contenido.</p>';
+          }
+        } catch (error) {
+          document.getElementById('modal-content').innerHTML = '<p class="text-gray-600">Error al cargar el contenido.</p>';
+        }
+      }
+      
+      // Cerrar modal de políticas
+      function closePolicyModal() {
+        document.getElementById('policy-modal').classList.add('hidden');
+      }
+      
+      // Guardar preferencias de políticas
+      function savePolicyPreferences() {
+        const privacyAccepted = document.getElementById('accept-privacy').checked;
+        const legalAccepted = document.getElementById('accept-legal').checked;
+        const termsAccepted = document.getElementById('accept-terms').checked;
+        
+        if (!privacyAccepted || !legalAccepted || !termsAccepted) {
+          alert('Debe aceptar todas las políticas para continuar.');
+          return;
+        }
+        
+        const policies = {
+          privacy: privacyAccepted,
+          legal: legalAccepted,
+          terms: termsAccepted,
+          cookies: true,
+          timestamp: new Date().toISOString()
+        };
+        
+        localStorage.setItem(POLICY_STORAGE_KEY, JSON.stringify(policies));
+        localStorage.setItem(COOKIE_STORAGE_KEY, 'true');
+        
+        closePolicyModal();
+        hidePolicyBanner();
+        
+        // Activar Google Analytics si está disponible
+        if (typeof gtag !== 'undefined') {
+          gtag('consent', 'update', {
+            'analytics_storage': 'granted'
+          });
+        }
+      }
+      
+      // Cerrar modal al hacer clic fuera
+      document.getElementById('policy-modal').addEventListener('click', function(e) {
+        if (e.target === this) {
+          closePolicyModal();
+        }
+      });
+      
+      // Cerrar modal con tecla Escape
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closePolicyModal();
+        }
+      });
+      
+      // Verificar aceptación al cargar la página
+      document.addEventListener('DOMContentLoaded', function() {
+        checkPolicyAcceptance();
+        updateBusinessStatus();
+        // Actualizar cada minuto
+        setInterval(updateBusinessStatus, 60000);
+      });
+
+      // Función para verificar si el negocio está abierto
+      function isBusinessOpen() {
+        const now = new Date();
+        const day = now.getDay(); // 0 = Domingo, 1 = Lunes, ..., 6 = Sábado
+        const hour = now.getHours();
+        const minute = now.getMinutes();
+        const currentTime = hour * 60 + minute; // Tiempo en minutos desde medianoche
+
+        // Lunes a Jueves (1-4): 8:00-13:00 y 15:00-18:00
+        if (day >= 1 && day <= 4) {
+          const morningStart = 8 * 60; // 8:00
+          const morningEnd = 13 * 60; // 13:00
+          const afternoonStart = 15 * 60; // 15:00
+          const afternoonEnd = 18 * 60; // 18:00
+          
+          return (currentTime >= morningStart && currentTime <= morningEnd) ||
+                 (currentTime >= afternoonStart && currentTime <= afternoonEnd);
+        }
+        
+        // Viernes (5): 8:00-15:00
+        if (day === 5) {
+          const start = 8 * 60; // 8:00
+          const end = 15 * 60; // 15:00
+          return currentTime >= start && currentTime <= end;
+        }
+        
+        // Sábado y Domingo (0, 6): Cerrado
+        return false;
+      }
+
+      // Función para actualizar el estado visual del negocio
+      function updateBusinessStatus() {
+        const container = document.getElementById('schedule-container');
+        const icon = document.getElementById('schedule-icon');
+        const statusText = document.getElementById('status-text');
+        
+        if (!container || !icon || !statusText) return;
+        
+        const isOpen = isBusinessOpen();
+        
+        if (isOpen) {
+          // Negocio abierto - fondo verde
+          container.className = 'hidden sm:flex items-center gap-3 text-sm px-3 py-1 rounded-md transition-colors duration-300 bg-green-600/20 border border-green-500/30';
+          icon.textContent = 'schedule';
+          icon.className = 'material-icons text-sm text-green-300';
+          statusText.textContent = 'ABIERTO';
+          statusText.className = 'font-semibold text-green-300';
+        } else {
+          // Negocio cerrado - fondo rojo
+          container.className = 'hidden sm:flex items-center gap-3 text-sm px-3 py-1 rounded-md transition-colors duration-300 bg-red-600/20 border border-red-500/30';
+          icon.textContent = 'schedule';
+          icon.className = 'material-icons text-sm text-red-300';
+          statusText.textContent = 'CERRADO';
+          statusText.className = 'font-semibold text-red-300';
+        }
       }
     </script>
 </body>
