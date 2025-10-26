@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Página no encontrada - 404 | Cresiauto</title>
+    <meta name="description" content="La página que buscas no existe. Volver a Cresiauto - Taller multimarca en Cartagena." />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="author" content="Cresiauto" />
+    <meta name="theme-color" content="#111827" />
+    <link rel="canonical" href="https://www.cresiauto.com/404.html" />
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.svg" />
+    <link rel="apple-touch-icon" href="/images/logo_cresiauto.svg" />
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Configuración -->
+    <script src="config.js"></script>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#fff5f5',
+                100: '#ffe3e3',
+                200: '#ffbdbd',
+                300: '#ff9b9b',
+                400: '#f86a6a',
+                500: '#e2211c',
+                600: '#c61d19',
+                700: '#a01915',
+                800: '#7c1411',
+                900: '#5f100e'
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      :root { color-scheme: light dark; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+    <!-- Contenido principal 404 -->
+    <main class="min-h-screen flex items-center justify-center">
+        <div class="max-w-md mx-auto px-4 text-center">
+            <!-- Logo -->
+            <div class="mb-8">
+                <a href="/" class="inline-block">
+                    <img src="/images/logo_cresiauto.png" alt="Cresiauto" class="h-16 w-auto mx-auto" />
+                </a>
+                    </div>
+
+            <!-- Número 404 -->
+            <div class="mb-6">
+                <div class="text-8xl font-bold text-brand-600/20 select-none">404</div>
+            </div>
+
+            <!-- Mensaje -->
+            <div class="mb-8">
+                <h1 class="text-2xl font-bold text-gray-900 mb-3">
+                    Página no encontrada
+                </h1>
+                <p class="text-gray-600">
+                    La página que buscas no existe o ha sido movida.
+                </p>
+            </div>
+
+            <!-- Botones de acción -->
+            <div class="space-y-3">
+                <a href="/" class="block w-full bg-brand-600 text-white py-3 px-6 rounded-lg hover:bg-brand-700 transition font-medium">
+                    Volver al inicio
+                </a>
+                <a href="https://wa.me/34678697668?text=Hola%20Cresiauto,%20necesito%20ayuda" target="_blank" rel="noopener" class="block w-full bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-700 transition font-medium">
+                    Contactar por WhatsApp
+                </a>
+            </div>
+
+            <!-- Enlaces rápidos -->
+            <div class="mt-8 pt-6 border-t border-gray-200">
+                <p class="text-sm text-gray-500 mb-4">Enlaces útiles:</p>
+                <div class="flex flex-wrap justify-center gap-4 text-sm">
+                    <a href="/#servicios" class="text-brand-600 hover:text-brand-700">Servicios</a>
+                    <a href="/#presupuesto" class="text-brand-600 hover:text-brand-700">Presupuesto</a>
+                    <a href="/#contacto" class="text-brand-600 hover:text-brand-700">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página minimalista -->
+    <footer class="bg-white border-t border-gray-200 py-6">
+        <div class="max-w-md mx-auto px-4 text-center">
+            <p class="text-sm text-gray-500">
+                © <span id="year"></span> Cresiauto. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+      // Actualizar año
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
