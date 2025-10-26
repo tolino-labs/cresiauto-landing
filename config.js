@@ -60,7 +60,7 @@ const CONFIG = {
     favicon: "/favicon.ico",
     appleTouchIcon: "/apple-touch-icon.png",
     manifest: "/site.webmanifest",
-    logo: "/logo.png"
+    logo: "/logo_cresiauto.png"
   },
 
   // Promociones
