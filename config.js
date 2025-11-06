@@ -66,9 +66,9 @@ const CONFIG = {
   // Promociones
   promotions: {
     welcome: {
-      title: "Promo bienvenida:",
-      description: "10% dto. en mano de obra en tu primera visita.",
-      whatsappText: "Quiero aprovechar la promo de bienvenida"
+      title: "👋 ¡Bienvenido a Cresiauto!",
+      description: "Tu taller de confianza en Cartagena. Más de 20 años cuidando tu vehículo con calidad, transparencia y garantía.",
+      whatsappText: "Hola%20Cresiauto,%20quiero%20pedir%20cita"
     }
   },
 
@@ -77,7 +77,7 @@ const CONFIG = {
     appointment: "Hola%20Cresiauto,%20quiero%20pedir%20cita",
     quote: "Hola%20Cresiauto,%20quisiera%20presupuesto%20para...",
     review: "Hola%20Cresiauto,%20quiero%20dejar%20mi%20opinión",
-    welcome: "Quiero%20aprovechar%20la%20promo%20de%20bienvenida"
+    welcome: "Hola%20Cresiauto,%20quiero%20pedir%20cita"
   },
 
   // Servicios
